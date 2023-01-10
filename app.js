@@ -24,9 +24,14 @@ setInterval( () =>
 )
 */
 
-const na = require('./name')
+const name = require('./name')
 const sayHi = require('./utils')
+const names = require('./alternate')
+
+console.log(names.personal)
+
+console.log(name)
 
 sayHi("Chibundu")
-sayHi(na.john)
-sayHi(na.mike)
+sayHi(name.john)
+sayHi(name.mike)
