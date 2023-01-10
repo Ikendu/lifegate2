@@ -1,3 +1,4 @@
+/*
 const amount = 12
 if (amount < 10)
 {
@@ -9,7 +10,7 @@ else
 
 }
  console.log(`hey its my first node app!`)
-/*
+
 console.log(__dirname)
 console.log(require)
 console.log(__filename)
@@ -22,7 +23,7 @@ setInterval( () =>
 	console.log("Chibundu is a Software Engineer");
 }, 1000
 )
-*/
+
 
 const name = require('./name')
 const sayHi = require('./utils')
@@ -35,3 +36,32 @@ console.log(name)
 sayHi("Chibundu")
 sayHi(name.john)
 sayHi(name.mike)
+*/
+
+const os = require('os')
+const fs = require('fs')
+
+const first = fs.readFileSync('./content.txt', 'utf8')
+const second = fs.readFileSync('./second.txt', 'utf8')
+
+console.log(first, second)
+
+
+
+//info about current user
+const user = os.userInfo()
+console.log(user);
+
+//get the system uptime in seconds
+
+console.log(`The system uptime is ${os.uptime()}`);
+console.log(os.freemem());
+
+
+const currentOS = {
+	name: os.type(),
+	release: os.release(),
+	totalMem: os.totalmem()
+}
+
+console.log(currentOS)
