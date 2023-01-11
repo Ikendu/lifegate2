@@ -61,9 +61,7 @@ readFile('./newfile.txt', 'utf8', (err, res) => {
 		return
 	}
 	const third = res;
-	console.log(third);
-	
-
+	console.log(third);	
 
 writeFile('./asyncWrite1.txt', `Final writing is here: ${third}`,
 	{flag: 'a'}, (err, res) => {
