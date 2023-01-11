@@ -39,14 +39,8 @@ sayHi(name.mike)
 */
 
 const os = require('os')
-const fs = require('fs')
 
-const first = fs.readFileSync('./content.txt', 'utf8')
-const second = fs.readFileSync('./second.txt', 'utf8')
-
-console.log(first, second)
-
-
+/*
 
 //info about current user
 const user = os.userInfo()
@@ -65,3 +59,4 @@ const currentOS = {
 }
 
 console.log(currentOS)
+*/
