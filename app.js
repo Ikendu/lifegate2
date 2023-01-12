@@ -1,11 +1,17 @@
-const EventEmitter = require('events')
+const {writeFileSync, createReadStream} = require('fs')
 
-const customEmitter = new EventEmitter()
+const stream = createReadStream('./big.txt', 'utf8')
 
-customEmitter.on('response', (name, id) => {
-	console.log(`data received for user ${name} and id ${id}`)
+stream.on('data', (result) => {
+	console.log(result)
 })
-customEmitter.on('response', () => {
-	console.log(`other logic goes here`)
-})
-customEmitter.emit('response', 'John', 32)
+
+/*
+for writing file
+for (let i = 0; i < 1000; i++){
+	writeFileSync('./big.txt', `hello word ${i}\n`, {flag: 'a'})
+}
+*/
+
+//for reading file
+
