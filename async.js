@@ -1,7 +1,7 @@
 
 const {readFile, writeFile} = require('fs')
 
-/*
+
 readFile('./content.txt', 'utf8', (err, result) => {
 	if (err)
 	 {
@@ -32,7 +32,8 @@ readFile('./content.txt', 'utf8', (err, result) => {
 			})
 	})
 })
-*/
+
+/*
 
 readFile('./content.txt', 'utf8', (error, result) => {
 	if(error)

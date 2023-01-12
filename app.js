@@ -11,6 +11,27 @@ const getText = (path) => {
 		})
 	})
 }
-getText('./content.txt').then(
-	(res) => console.log(res))
-	.catch((err) => console.log(err))
+
+
+const start = async() => {
+	try{
+		const first = await getText('./content.txt');
+		const second = await getText('./second.txt');
+		console.log(first)
+		console.log(second)
+		const third = await getText('./asyncWrite.txt');
+		console.log(third)
+
+	}
+	catch (error){
+		console.log(error)
+
+	}
+	
+}
+
+start()
+
+//getText('./content.txt')
+//.then((res) => console.log(res))
+//.catch((err) => console.log(err))
