@@ -1,10 +1,13 @@
 const {writeFileSync, createReadStream} = require('fs')
 
-const stream = createReadStream('./big.txt', 'utf8')
+const stream = createReadStream('./big.txt', 
+	{highWaterMark: 9000, encoding:'utf8'})
 
 stream.on('data', (result) => {
 	console.log(result)
 })
+
+ stream.on('error', (err) => console.log(err))
 
 /*
 for writing file
